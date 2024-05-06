@@ -1,0 +1,189 @@
+nav{
+    height: 5rem;
+    
+    background: var(--primary-color);
+    place-items: center;
+    position: fixed;
+    display: grid;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+  
+}
+
+/* only show on medium and small screen */
+
+.nav__toggle-btn{
+    display: none;
+}
+
+.nav__container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    width: 7rem;
+}
+
+.nav__links{
+    display: flex;
+    gap: 2rem;
+}
+
+.social__links{
+    display: flex;
+    gap: 1rem;
+}
+
+/* facebook link */
+.social__links .fb{
+    transform: scale(1);
+    transition: var(--transition);
+    color: #fff;
+    }
+.social__links .fb:hover{
+    color: #3b5998;
+    transform: scale(2);
+}
+
+/* Insta link */
+
+.social__links .linkedin{
+    transform: scale(1);
+    transition: var(--transition);
+  
+    }
+.social__links .linkedin:hover{
+    transform: scale(2);
+    color: #0A66C2;
+}
+
+/* twitter link */
+
+.social__links .twitter{
+    transform: scale(1);
+    transition: var(--transition);
+  
+    }
+.social__links .twitter:hover{
+    transform: scale(2);
+    color: #00acee;
+}
+
+/* insta link */
+
+ .social__links .insta{
+    transform: scale(1);
+    transition: var(--transition);
+    border-radius: 5px;
+    }
+.social__links .insta:hover{
+    transform: scale(2);
+    /* fill:linear-gradient(to right, #FEDA75 0%, #FA7E1E 7%, #D62976 39%, #962FBF 83%, #4F5BD5 100%); */
+    /* fill: #00acee; */
+    background: #FEDA75;
+background: linear-gradient(to right, #FEDA75 0%, #FA7E1E 7%, #D62976 39%, #962FBF 83%, #4F5BD5 100%);
+border-radius: 5px;
+
+
+
+
+}
+
+/* #feda75  #fa7e1e #d62976  #962fbf #4f5bd5  */
+
+
+.active{
+   color: #ff5e00;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+   .nav__toggle-btn{
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+   }
+
+   .nav__toggle-btn svg{
+    color: #ff5e00;
+   }
+   .nav__links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+   }
+  
+
+   .nav__links li{
+    height: 4rem;
+    width: 100%;
+    box-shadow: -2rem 2rem 5rem rgba(0,0,0,0.5);
+    animation: navAnimation 600ms ease forwards;
+    transform: rotateX(90deg);
+    opacity: 0;
+    transform-origin: top;
+}
+
+.nav__links li:nth-child(2){
+    animation-delay: 200ms;
+}
+.nav__links li:nth-child(3){
+    animation-delay: 400ms;
+}
+.nav__links li:nth-child(4){
+    animation-delay: 600ms;
+}
+.nav__links li:nth-child(5){
+    animation-delay: 800ms;
+}
+.nav__links li:nth-child(6){
+    animation-delay: 1s;
+}
+
+@keyframes navAnimation {
+    to{
+        transform: rotateX(0);
+        opacity: 1;
+    }
+}
+
+
+   .nav__links li a{
+    background: var(--primary-color);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem 1rem 3rem;
+   }
+
+
+   .social__links li{
+    transform: scale(1);
+    transition: var(--transition);
+    }
+.social__links li:hover{
+    
+    transform: scale(2);
+}
+
+   .show__nav{
+    display: flex;
+    z-index: 99;
+   }
+   .hide__nav{
+    display: none;
+   }
+
+}
+

@@ -1,0 +1,45 @@
+.project_cont{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 100px;
+}
+
+
+
+.project_cont small{
+    font-size: 20px;
+    font-weight: unset;
+    color: #777;
+ }
+
+ .project_cont h1{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #363636;
+ }
+
+ .project_lists{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  
+ }
+
+ .project_lists li{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #4d4c4c;
+    font-weight: 700;
+    cursor: pointer;
+ }
+
+ .project_lists li:hover{
+    color: #2e2e2e;
+ }
+
+ .container_help_img{
+    margin-top: 50px;
+    justify-content: center;
+ }
+

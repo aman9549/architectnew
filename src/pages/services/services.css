@@ -1,0 +1,24 @@
+.contact_page_cont {
+    margin-top: 100px;
+    display: grid;
+    gap: 1rem;
+
+}
+
+.contact_page_cont h5{
+    font-size: 27px;
+    color: #525252;
+    font-weight: bold;
+    line-height: 31px;
+}
+
+.contact_page_cont p{
+    color: #616161;
+    line-height: 30px;
+}
+
+.service_cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
